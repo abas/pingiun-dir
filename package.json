@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "This simple server to access directory",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Moh. Saifoelloh Noor",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
