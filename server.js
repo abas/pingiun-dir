@@ -1,9 +1,14 @@
 const fs = require('fs');
-const path = 'http://pinguin.dinus.ac.id/iso';
+const path = '../../../Documents/';
 
-fs.readdir(path, (err, data) => {
-  console.log(path);
-  // for (var i = 0; i < data.length; i++) {
-  //   console.log(data[i].isDirectory());
-  // }
+fs.readdir(path, ['withFileTypes: true'], (err, data) => {
+  if (err) {
+    throw err;
+  } else {
+    for (let i = 0; i < data.length; i++) {
+      fs.stat(path + data[i], (err, stats) => {
+        console.log(stats.isDirectory());
+      });
+    }
+  }
 });
