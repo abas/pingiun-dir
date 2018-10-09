@@ -1,14 +1,11 @@
 const fs = require('fs');
-const path = '../../../Documents/';
+const path = '../../';
 
-fs.readdir(path, ['withFileTypes: true'], (err, data) => {
-  if (err) {
-    throw err;
-  } else {
+fs.readdir(path, (err, data) => {
     for (let i = 0; i < data.length; i++) {
       fs.stat(path + data[i], (err, stats) => {
-        console.log(stats.isDirectory());
+          if(stats.isDirectory())
+            console.log(path+data[i]);
       });
     }
-  }
 });
