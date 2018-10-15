@@ -9,6 +9,8 @@
   "author": "Moh. Saifoelloh Noor",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^1.18.4"
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4",
+    "shelljs": "^0.8.2"
   }
 }
